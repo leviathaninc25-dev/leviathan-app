@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: leviathan-book
+    runtime: node
+    plan: free
+    buildCommand: npm install --omit=dev
+    startCommand: node server.js
+    envVars:
+      - key: SHOP_KEY
+        value: leviathan-floor
